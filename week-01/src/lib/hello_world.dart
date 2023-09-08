@@ -1,0 +1,3 @@
+String nama() {
+  return "Zaky";
+}
