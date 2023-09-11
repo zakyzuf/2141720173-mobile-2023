@@ -17,7 +17,7 @@ Setelah kode diperbaiki, kode bisa dieksekusi dan menampilkan hasil tambahan yai
 # Praktikum 2: Menerapkan Perulangan "while" dan "do-while"
 <h2>Langkah 1 & Langkah 2</h2>
 
-![image](docs/images/praktikum2_langkah2F.png)
+![image](docs/images/praktikum2_langkah2F.png)</br>
 Terjadi error pada kode tersebut karena variabel <b>counter</b> belum dideklarasikan dan belum memiliki nilai.</br></br></br>
 ![image](docs/images/praktikum2_langkah2T.png)</br>
 Hasil eksekusi dari kode yang telah diperbaiki, menghasilkan perulangan print nilai variabel <b>counter</b> yang akan bertambah 1 nilai setiap terjadi perulangan. Perulangan terjadi sampai nilai variabel <b>counter</b> bernilai 32 (kurang dari 33).</br>
@@ -47,4 +47,4 @@ Saat operator pada else yang awalnya <b>atau ( || )</b> diubah menjadi <b>dan ( 
 
 # Tugas Praktikum
 Buatlah sebuah program yang dapat menampilkan bilangan prima dari angka 0 sampai 201 menggunakan Dart. Ketika bilangan prima ditemukan, maka tampilkan nama lengkap dan NIM Anda.
-![image](docs/images/tugas_praktikum.png)
+![image](docs/images/tugas_praktikum.PNG)
