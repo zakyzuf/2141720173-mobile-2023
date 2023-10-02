@@ -62,7 +62,7 @@ Output:</br>
 ![image](docs/images/praktikum4_langkah5_1.jpeg)</br>
 ![image](docs/images/praktikum4_langkah5_2.jpeg)
 ### Langkah 6: Date and Time Pickers
-Date and Time Pickers termasuk pada kategori input dan selection widget. Mengubah file main untuk menggunakan Date and Time Pickers.
+Date and Time Pickers termasuk pada kategori input dan selection widget. Mengubah file main untuk menggunakan Date and Time Pickers.</br>
 ![image](docs/images/praktikum4_langkah6.png)</br>
 Output:</br>
 ![image](docs/images/praktikum4_langkah6_1.jpeg)
@@ -173,7 +173,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 ```
-Output:
+Output:</br>
 ![image](docs/images/output_tugas3.jpeg)
 ### Langkah 4
 Membuat file dialog widget
@@ -243,7 +243,7 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
-Output:
+Output:</br>
 ![image](docs/images/output_tugas3_1.jpeg)
 
 #### Langkah 5
@@ -293,7 +293,7 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
-Output:
+Output:</br>
 ![image](docs/images/output_tugas3_2.jpeg)
 ![image](docs/images/output_tugas3_3.jpeg)
 
@@ -377,7 +377,7 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
-Output:
+Output:</br>
 ![image](docs/images/output_tugas3_4.jpeg)
 ![image](docs/images/output_tugas3_5.jpeg)
 
