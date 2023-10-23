@@ -110,8 +110,13 @@ Container(
 Item pada ListView saat ini ketika ditekan masih belum memberikan aksi tertentu. Untuk menambahkan aksi pada ListView dapat digunakan widget `InkWell` atau `GestureDetector`. Perbedaan utamanya `InkWell` merupakan material widget yang memberikan efek ketika ditekan. Sedangkan `GestureDetector` bersifat umum dan bisa juga digunakan untuk gesture lain selain sentuhan. Pada praktikum ini akan digunakan widget `InkWell`.
 
 Untuk menambahkan sentuhan, letakkan cursor pada widget pembuka `Card`. Kemudian gunakan shortcut quick fix dari VSCode (<b>Ctrl +</b> . pada Windows atau <b>Cmd +</b> . pada MacOS). Sorot menu <b>wrap with widget...</b> Ubah nilai widget menjadi `InkWell` serta tambahkan named argument `onTap` yang berisi fungsi untuk berpindah ke halaman `ItemPage`. Ilustrasi potongan kode dapat anda lihat pada potongan berikut.
+</br>
+Kode pada file `home_page.dart`
 
 ```dart
+
+import 'package:belanja/models/item.dart';
+import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -122,43 +127,92 @@ class HomePage extends StatelessWidget {
   ];
   final routeName = '/item';
 
- @override
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(8),
-      child: ListView.builder(
-        itemCount: items.length,
-        itemBuilder: (context, index) {
-          final item = items[index];
-          return Material(
-            child: InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, routeName, arguments: item);
-              },
-              child: Card(
-                child: Container(
-                  margin: const EdgeInsets.all(8),
-                  child: Row(
-                    children: [
-                      Expanded(child: Text(item.name.toString())),
-                      Expanded(
-                        child: Text(
-                          item.price.toString(),
-                          textAlign: TextAlign.end,
-                        ),
-                      )
-                    ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Shopping List'),
+      ),
+      body: Container(
+        margin: const EdgeInsets.all(15),
+        child: ListView.builder(
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            final item = items[index];
+            return Material(
+              child: InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, routeName, arguments: item);
+                },
+                child: Card(
+                  child: Container(
+                    margin: const EdgeInsets.all(8),
+                    child: Row(
+                      children: [
+                        Expanded(child: Text(item.name.toString())),
+                        Expanded(
+                          child: Text(
+                            item.price.toString(),
+                            textAlign: TextAlign.end,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }
 }
 ```
+
+Kode pada file `item_page.dart`</br>
+
+```dart
+import 'package:belanja/models/item.dart';
+import 'package:flutter/material.dart';
+
+class ItemPage extends StatelessWidget {
+  const ItemPage({super.key});
+  @override
+  Widget build(BuildContext context) {
+    final itemArgs = ModalRoute.of(context)!.settings.arguments as Item;
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Shopping List'),
+      ),
+      body: Container(
+        margin: const EdgeInsets.all(15),
+          child: Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  itemArgs.name.toString(),
+                  style: const TextStyle(fontSize: 24),
+                ),
+                const SizedBox(width: 6),
+                const Text(
+                  'with',
+                  style: TextStyle(fontSize: 18),
+                ),
+                const SizedBox(width: 6),
+                Text(
+                  itemArgs.price.toString(),
+                  style: const TextStyle(fontSize: 18),
+                ),
+              ],
+            ),
+          ),
+      ),
+    );
+  }
+}
+```
+
 Output:</br>
 ![gif](docs/gifs/output_praktikum.gif)
-Terjadi UnimplementedError karena pada file `item_page.dart` dilakukan `throw UnimplementedError();`. Sehingga menandakan praktikum berhasil.
