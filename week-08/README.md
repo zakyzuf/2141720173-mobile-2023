@@ -232,11 +232,386 @@ Output:</br>
 4. Silakan implementasikan Hero widget pada aplikasi belanja Anda dengan mempelajari dari sumber ini:
 <a href="https://docs.flutter.dev/cookbook/navigation/hero-animations">https://docs.flutter.dev/cookbook/navigation/hero-animations</a>
 
-5. Sesuaikan dan modifikasi tampilan sehingga menjadi aplikasi yang menarik. Selain itu, pecah widget menjadi kode yang lebih kecil. Tambahkan Nama dan NIM di footer aplikasi belanja Anda.
+5. Sesuaikan dan modifikasi tampilan sehingga menjadi aplikasi yang menarik. Selain itu, pecah widget menjadi kode yang lebih kecil. Tambahkan Nama dan NIM di footer aplikasi belanja Anda.</br>
+    Memecah widget menjadi file tersendiri:</br>
+    `custom_price.dart`:
 
+    ```dart
+    import 'package:flutter/material.dart';
+    import 'package:intl/intl.dart';
+
+    class CustomPrice extends StatelessWidget {
+      final int price;
+
+      const CustomPrice({Key? key, required this.price}) : super(key: key);
+
+      @override
+      Widget build(BuildContext context) {
+        final formattedPrice = NumberFormat.currency(
+          locale: 'id_ID', 
+          symbol: 'Rp',
+        ).format(price);
+
+        return Text(
+          formattedPrice,
+          style: const TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w600,
+            height: 1.5,
+            color: Colors.black,
+          ),
+        );
+      }
+    }
+    ```
+    </br>
+
+    `custom_rating.dart`:
+    ```dart
+    import 'package:flutter/material.dart';
+
+    class CustomRating extends StatelessWidget {
+      final double? rating;
+
+      const CustomRating({Key? key, required this.rating}) : super(key: key);
+
+      @override
+      Widget build(BuildContext context) {
+        return Row(
+          children: [
+            const Icon(
+              Icons.star,
+              color: Colors.amber,
+            ),
+            Text(
+              rating.toString(),
+              style: const TextStyle(
+                fontSize: 16,
+                color: Colors.black,
+              ),
+            ),
+          ],
+        );
+      }
+    }
+    ```
+    </br>
+
+    `stock_status.dart`:
+    ```dart
+    import 'package:flutter/material.dart';
+
+    class StockStatus extends StatelessWidget {
+      final int stock;
+
+      const StockStatus({Key? key, required this.stock}) : super(key: key);
+
+      @override
+      Widget build(BuildContext context) {
+        Color textColor = stock < 10 ? Colors.red : Colors.green;
+        String status = stock < 10 ? 'Stok hampir habis, stok: $stock' : 'Stok tersedia, stok: $stock';
+
+        return Text(
+          status,
+          style: TextStyle(
+            color: textColor,
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+          ),
+        );
+      }
+    }
+    ```
+    </br>
+
+    Mengubah file `item.dart`, `home_page.dart`, `item_page.dart` untuk menggunakan widget yang telah dipecah.
+    
+    </br>
+
+    `item.dart`:
+
+    ```dart
+    class Item {
+      String? name, imageUrl;
+      int price, stok;
+      double? rating;
+
+      Item({this.name, this.imageUrl, required this.price, required this.stok, this.rating});
+    }
+    ```
+    </br>
+
+    `home_page.dart`:
+
+    ```dart
+    import 'package:belanja/models/item.dart';
+    import 'package:belanja/widgets/custom_price.dart';
+    import 'package:belanja/widgets/custom_rating.dart';
+    import 'package:belanja/widgets/stock_status.dart';
+    import 'package:flutter/material.dart';
+
+    class HomePage extends StatelessWidget {
+      HomePage({super.key});
+
+      final List<Item> items = [
+        Item(
+          name: 'Tepung Beras 250gr',
+          imageUrl:
+              'assets/tpberas.jpg',
+          price: 2200,
+          stok: 30,
+          rating: 4.4,
+        ),
+        Item(
+          name: 'Minyak Goreng Sania 1L',
+          imageUrl:
+              'assets/minyakgoreng.jpg',
+          price: 13800,
+          stok: 70,
+          rating: 4.8,
+        ),
+        Item(
+          name: 'Beras Sania 5kg',
+          imageUrl:
+              'assets/beras.jpg',
+          price: 76000,
+          stok: 100,
+          rating: 4.7,
+        ),
+        Item(
+          name: 'Madu TJ 500gr',
+          imageUrl:
+              'assets/madu.jpeg',
+          price: 55000,
+          stok: 9,
+          rating: 4.6,
+        ),
+        Item(
+          name: 'Tepung Beras 250gr',
+          imageUrl:
+              'assets/tpberas.jpg',
+          price: 2200,
+          stok: 30,
+          rating: 4.4,
+        ),
+        Item(
+          name: 'Minyak Goreng Sania 1L',
+          imageUrl:
+              'assets/minyakgoreng.jpg',
+          price: 13800,
+          stok: 70,
+          rating: 4.8,
+        ),
+        Item(
+          name: 'Beras Sania 5kg',
+          imageUrl:
+              'assets/beras.jpg',
+          price: 76000,
+          stok: 8,
+          rating: 4.7,
+        ),
+        Item(
+          name: 'Madu TJ 500gr',
+          imageUrl:
+              'assets/madu.jpeg',
+          price: 55000,
+          stok: 40,
+          rating: 4.6,
+        ),
+        Item(
+          name: 'Tepung Beras 250gr',
+          imageUrl:
+              'assets/tpberas.jpg',
+          price: 2200,
+          stok: 30,
+          rating: 4.4,
+        ),
+        Item(
+          name: 'Minyak Goreng Sania 1L',
+          imageUrl:
+              'assets/minyakgoreng.jpg',
+          price: 13800,
+          stok: 7,
+          rating: 4.8,
+        ),
+      ];
+
+      @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+          appBar: AppBar(
+            title: const Text("Toko Tokoan"),
+          ),
+          body: Container(
+            margin: const EdgeInsets.all(6),
+            child: GridView.count(
+              primary: false,
+              crossAxisCount: 2,
+              children: items
+                  .asMap()
+                  .entries
+                  .map((item) => ItemCard(
+                        item: item.value,
+                        index: item.key,
+                      ))
+                  .toList(),
+            ),
+          ),
+          bottomNavigationBar: const Text(
+            "Mochammad Zaky Zamroni - 2141720117",
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.black54, fontSize: 12),
+          ),
+        );
+      }
+    }
+
+    class ItemCard extends StatelessWidget {
+      final Item item;
+      final int index;
+      const ItemCard({super.key, required this.item, required this.index});
+
+      final String routeName = '/item';
+      @override
+      Widget build(BuildContext context) {
+        return Material(
+          child: InkWell(
+            onTap: () {
+              Navigator.pushNamed(context, routeName, arguments: (item, index));
+            },
+            child: Card(
+              child: SizedBox(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 96,
+                      width: 120,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Hero(
+                          tag: "imageMovePage_$index",
+                          child: Image(
+                            image: AssetImage(
+                              item.imageUrl.toString(),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Text(item.name.toString(), style: const TextStyle(
+                                fontSize: 14, fontWeight: FontWeight.w600)),
+                    CustomPrice(price: item.price),
+                    StockStatus(stock: item.stok),
+                    CustomRating(rating: item.rating)
+                  ],
+                ),
+              ),
+            ),
+          ),
+        );
+      }
+    }
+    ```
+    </br>
+
+    `item_page.dart`:
+
+    ```dart
+    import 'package:belanja/models/item.dart';
+    import 'package:belanja/widgets/custom_price.dart';
+    import 'package:belanja/widgets/custom_rating.dart';
+    import 'package:belanja/widgets/stock_status.dart';
+    import 'package:flutter/material.dart';
+
+    class ItemPage extends StatelessWidget {
+      const ItemPage({super.key});
+      @override
+      Widget build(BuildContext context) {
+        final (itemArgs, index) =
+            ModalRoute.of(context)!.settings.arguments as (Item, int);
+
+        return Scaffold(
+          appBar: AppBar(
+            title: const Text("Detail Item"),
+          ),
+          body: Container(
+            margin: const EdgeInsets.all(8),
+            child: Column(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Hero(
+                    tag: "imageMovePage_$index",
+                    child: Image(
+                      image: AssetImage(
+                        itemArgs.imageUrl.toString(),
+                      ),
+                    ),
+                  ),
+                ),
+                ItemDataPlaceholder(
+                  itemArgs: itemArgs,
+                ),
+              ],
+            ),
+          ),
+          bottomNavigationBar: const Text(
+            "Mochammad Zaky Zamroni - 2141720117",
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.black54, fontSize: 12),
+          ),
+        );
+      }
+    }
+
+    class ItemDataPlaceholder extends StatelessWidget {
+      final Item itemArgs;
+      const ItemDataPlaceholder({super.key, required this.itemArgs});
+
+      @override
+      Widget build(BuildContext context) {
+        return Center(
+          child: Card(
+            clipBehavior: Clip.hardEdge,
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width * 1,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Text(
+                      itemArgs.name!,
+                      style: const TextStyle(
+                          fontSize: 30, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    CustomPrice(price: itemArgs.price),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    StockStatus(stock: itemArgs.stok),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    CustomRating(rating: itemArgs.rating)
+                  ],
+                ),
+              ),
+            ),
+          ),
+        );
+      }
+    }
+    ```
+
+    </br>
 6. Selesaikan Praktikum Navigasi dan Rute tersebut, lalu dokumentasikan dan push ke repository Anda berupa screenshot setiap hasil pekerjaan beserta penjelasannya di file README.md. Kumpulkan link commit repository GitHub Anda ke spreadsheet yang telah disediakan!
 
 </br>
 Output:</br>
 
-![gif](docs/gifs/output_tugas.gif)
+![gif](docs/gifs/output_tugas.gif)</br>
+

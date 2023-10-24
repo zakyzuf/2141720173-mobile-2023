@@ -1,4 +1,7 @@
 import 'package:belanja/models/item.dart';
+import 'package:belanja/widgets/custom_price.dart';
+import 'package:belanja/widgets/custom_rating.dart';
+import 'package:belanja/widgets/stock_status.dart';
 import 'package:flutter/material.dart';
 
 class ItemPage extends StatelessWidget {
@@ -65,28 +68,15 @@ class ItemDataPlaceholder extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                Text(
-                  "Rp. ${itemArgs.price.toString()}",
-                  style: const TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.w400),
-                ),
+                CustomPrice(price: itemArgs.price),
                 const SizedBox(
                   height: 10,
                 ),
-                Text('Stok: ${itemArgs.stok}',
-                    style: TextStyle(
-                        color:
-                            itemArgs.stok! < 10 ? Colors.red : Colors.green)),
+                StockStatus(stock: itemArgs.stok),
                 const SizedBox(
                   height: 10,
                 ),
-                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  const Icon(
-                    Icons.star,
-                    color: Colors.amber,
-                  ),
-                  Text(itemArgs.rating.toString())
-                ])
+                CustomRating(rating: itemArgs.rating)
               ],
             ),
           ),
@@ -95,38 +85,3 @@ class ItemDataPlaceholder extends StatelessWidget {
     );
   }
 }
-
-// class ItemDataDisplay extends StatelessWidget {
-//   String? variable, data;
-//   ItemDataDisplay({super.key, this.data, this.variable});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Row(
-//       mainAxisAlignment: MainAxisAlignment.spaceAround,
-//       children: [
-//         Expanded(
-//           flex: 1,
-//           child: Text(
-//             variable.toString(),
-//             style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-//             textAlign: TextAlign.left,
-//           ),
-//         ),
-//         const Expanded(
-//           flex: 0,
-//           child: Text(
-//             ":",
-//             textAlign: TextAlign.left,
-//           ),
-//         ),
-//         Expanded(
-//           child: Text(
-//             data.toString(),
-//             textAlign: TextAlign.left,
-//           ),
-//         ),
-//       ],
-//     );
-//   }
-// }

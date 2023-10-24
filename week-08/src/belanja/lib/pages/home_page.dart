@@ -1,4 +1,7 @@
 import 'package:belanja/models/item.dart';
+import 'package:belanja/widgets/custom_price.dart';
+import 'package:belanja/widgets/custom_rating.dart';
+import 'package:belanja/widgets/stock_status.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -85,22 +88,6 @@ class HomePage extends StatelessWidget {
       stok: 7,
       rating: 4.8,
     ),
-    Item(
-      name: 'Beras Sania 5kg',
-      imageUrl:
-          'assets/beras.jpg',
-      price: 76000,
-      stok: 100,
-      rating: 4.7,
-    ),
-    Item(
-      name: 'Madu TJ 500gr',
-      imageUrl:
-          'assets/madu.jpeg',
-      price: 55000,
-      stok: 40,
-      rating: 4.6,
-    ),
   ];
 
   @override
@@ -168,17 +155,9 @@ class ItemCard extends StatelessWidget {
                 ),
                 Text(item.name.toString(), style: const TextStyle(
                             fontSize: 14, fontWeight: FontWeight.w600)),
-                Text('Rp. ${item.price}'),
-                Text('Stok: ${item.stok}', style: TextStyle(color: item.stok! < 10 ? Colors.red : Colors.green)),
-                Row(
-                  children: [
-                    const Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                    ),
-                    Text(item.rating.toString())
-                  ]
-                )
+                CustomPrice(price: item.price),
+                StockStatus(stock: item.stok),
+                CustomRating(rating: item.rating)
               ],
             ),
           ),
