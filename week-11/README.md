@@ -596,7 +596,13 @@ PlanScreen(plan: plan,)));
 
 # Tugas Praktikum 3: State di Multiple Screens
 1.Selesaikan langkah-langkah praktikum tersebut, lalu dokumentasikan berupa GIF hasil akhir praktikum beserta penjelasannya di file README.md! Jika Anda menemukan ada yang error atau tidak berjalan dengan baik, silakan diperbaiki sesuai dengan tujuan aplikasi tersebut dibuat.</br>
-Jawab: Terjadi error di beberapa bagian `plan_screen.dart`. Berikut perbaikannya:</br>
+Jawab: Terjadi error di `main.dart` dan beberapa bagian `plan_screen.dart`. Berikut perbaikannya:</br>
+
+Perbaikan pada home `main.dart`
+```dart
+home: const PlanCreatorScreen(plan: Plan(name: 'My Plan')),
+```
+
 Perbaikan pada bagian variabel class __PlanScreenState
 ```dart
 class _PlanScreenState extends State<PlanScreen> {
