@@ -16,3 +16,13 @@ Fungsi `substring(0, 450)` digunakan untuk mengambil sebagian string dari karakt
 <li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 3</b>".</br>
 
 ![gif](docs/gif/soal3.gif)</ul>
+
+# Praktikum 2: Menggunakan await/async untuk menghindari callbacks
+
+## Soal 4
+<ul><li>Jelaskan maksud kode langkah 1 dan 2 tersebut!</br>
+Pada langkah 1, mendefinisikan tiga fungsi asinkron (returnOneAsync, returnTwoAsync, dan returnThreeAsync). Setiap fungsi ini melakukan tunda (delay) selama 3 detik menggunakan Future.delayed dan mengembalikan nilai berturut-turut 1, 2, dan 3 setelah delay selesai. Pada langkah 2 mendefinisikan fungsi asinkron `count()` dengan variabel total. Nilai dari fungsi asinkron yang telah didefinisikan pada langkah 1 diambil secara berurutan menggunakan await. Lalu nilai-nilai tersebut ditambahkan untuk menjadi nilai dari variabel total. Fungsi setState digunakan untuk mengganti nilai variabel result menjadi nilai variabel total.
+</li>
+<li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 4</b>".</br>
+
+![gif](docs/gif/soal4.gif)</ul>
