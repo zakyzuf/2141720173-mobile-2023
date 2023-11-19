@@ -168,3 +168,21 @@ Yang terjadi, warna akan berubah setiap button diklik. Warna yang mengalami peru
 ![gif](docs/gif/soal16_2.gif)
 </li>
 </ul></br>
+
+# Praktikum 9: Memanfaatkan async/await dengan Widget Dialog
+
+## Soal 17
+<ul>
+<li>Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?</br>
+
+![gif](docs/gif/soal17.gif)
+</br>
+Terjadi perubahan warna latar belakang layar ketika memilih warna dari dialog setelah mengklik tombol "Change Color". Mekanisme ini dipicu oleh pembaruan nilai variabel "color" dalam fungsi _showColorDialog. Dengan menggunakan setState, widget diperbaharui, sehingga memicu pembangunan ulang dan menghasilkan tampilan layar yang mencerminkan perubahan warna yang baru dipilih oleh pengguna.</li>
+<li>Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!</br>
+
+![img](docs/images/soal17.png)
+</li>
+<li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 17<b>".</br>
+
+![gif](docs/gif/soal17_1.gif)
+</li></ul>
