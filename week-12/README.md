@@ -19,7 +19,7 @@ Jelaskan maksud kode langkah 5 tersebut terkait `substring` dan `catchError`!
 Fungsi `substring(0, 450)` digunakan untuk mengambil sebagian string dari karakter 0 hingga 449. Ini berarti mengambil 450 karakter pertama dari data tersebut. `catchError` menangkap error yang mungkin terjadi selama proses asynchronous. Saat terjadi error maka kode program pada `catchError` akan dijalankan</li>
 <li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 3</b>".</br>
 
-![gif](docs/gif/soal3.gif)</ul>
+![gif](docs/gif/soal3.gif)</ul></br>
 
 # Praktikum 2: Menggunakan await/async untuk menghindari callbacks
 
@@ -30,7 +30,9 @@ Pada langkah 1, mendefinisikan tiga fungsi asinkron (returnOneAsync, returnTwoAs
 </li>
 <li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 4</b>".</br>
 
-![gif](docs/gif/soal4.gif)</ul>
+![gif](docs/gif/soal4.gif)</ul></br>
+
+# Praktikum 3: Menggunakan Completer di Future
 
 ## Soal 5
 <ul><li>
@@ -52,8 +54,9 @@ Perbedaan utama antara langkah 2 dan langkah 5-6 adalah penanganan kesalahan (er
 <li>
 Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 6</b>".</br>
 
-![gif](docs/gif/soal6.gif)</ul>
-</ul>
+![gif](docs/gif/soal6.gif)</ul></br>
+
+# Praktikum 4: Memanggil Future secara paralel
 
 ## Soal 7
 <ul><li>
@@ -66,7 +69,9 @@ Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan co
 Jelaskan maksud perbedaan kode langkah 1 dan 4!</br>
 
 Perbedaan utama antara langkah 1 dan langkah 4 terletak pada cara pengelolaan future. Pada langkah 1, digunakan `FutureGroup` untuk mengelola sejumlah future secara terpisah sebelum menggabungkannya, sedangkan pada langkah 4, pendekatan lebih sederhana dengan menggunakan `Future.wait` untuk menunggu semua future di dalam list dan mengembalikan future tunggal. Langkah 4 lebih mudah dimengerti daripada langkah 1.
-</ul>
+</ul></br>
+
+# Praktikum 5: Menangani Respon Error pada Async Code
 
 ## Soal 9
 <ul><li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 9</b>".</br>
@@ -80,8 +85,9 @@ Perbedaan utama antara langkah 1 dan langkah 4 terletak pada cara pengelolaan fu
 Panggil method `handleError()` tersebut di `ElevatedButton`, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!
 
 Perbedaan antara langkah 1 dan langkah 4 terletak pada cara penanganan exception. Pada langkah 1, exception dilempar secara langsung dari fungsi `returnError`, sementara pada langkah 4, exception tersebut diambil dan diatasi di dalam blok `try-catch` di dalam fungsi `handleError`. Dengan menggunakan struktur `try-catch`, kita memiliki kemampuan untuk memberikan respons khusus terhadap exception yang muncul, seperti mengonfigurasi nilai variabel `result` atau melibatkan tindakan khusus lainnya. Selain itu, pada langkah 4, terdapat blok `finally` yang akan selalu dijalankan, tanpa terpengaruh oleh apakah exception terjadi atau tidak.
-</ul>
+</ul></br>
 
+# Praktikum 6: Menggunakan Future dengan StatefulWidget
 ## Soal 11
 
 <ul>
@@ -106,8 +112,9 @@ Pada chrome saya bisa mendapat koordinat GPS, karena chrome mendukung berbagai A
 
 ![gif](docs/gif/soal12_2.gif)
 </li>
-</ul>
+</ul></br>
 
+# Praktikum 7: Manajemen Future dengan FutureBuilder
 ## Soal 13
 
 <ul>
@@ -120,4 +127,15 @@ Ada perbedaan UI dengan praktikum sebelumnya, pada praktikum sebelumnya `Latitud
 ![gif](docs/gif/soal13.gif)
 </li>
 <li>Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
+</ul>
+
+## Soal 14
+<ul>
+<li>Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?</br>
+
+Tidak ada perbedaan UI dengan langkah sebelumnya, karena pada langkah ini hanya menambahkan handling error `snapshot.hasError`</li>
+<li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 14</b>".</br>
+
+![gif](docs/gif/soal14.gif)
+</li>
 </ul>
