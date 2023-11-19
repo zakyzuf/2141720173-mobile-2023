@@ -81,3 +81,14 @@ Panggil method `handleError()` tersebut di `ElevatedButton`, lalu run. Apa hasil
 
 Perbedaan antara langkah 1 dan langkah 4 terletak pada cara penanganan exception. Pada langkah 1, exception dilempar secara langsung dari fungsi `returnError`, sementara pada langkah 4, exception tersebut diambil dan diatasi di dalam blok `try-catch` di dalam fungsi `handleError`. Dengan menggunakan struktur `try-catch`, kita memiliki kemampuan untuk memberikan respons khusus terhadap exception yang muncul, seperti mengonfigurasi nilai variabel `result` atau melibatkan tindakan khusus lainnya. Selain itu, pada langkah 4, terdapat blok `finally` yang akan selalu dijalankan, tanpa terpengaruh oleh apakah exception terjadi atau tidak.
 </ul>
+
+## Soal 11
+
+<ul>
+<li>
+
+Tambahkan nama panggilan Anda pada tiap properti `title` sebagai identitas pekerjaan Anda. </br>
+
+![img](docs/images/soal11.png)
+<ul>
+
