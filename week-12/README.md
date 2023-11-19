@@ -26,3 +26,13 @@ Pada langkah 1, mendefinisikan tiga fungsi asinkron (returnOneAsync, returnTwoAs
 <li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 4</b>".</br>
 
 ![gif](docs/gif/soal4.gif)</ul>
+
+## Soal 5
+<ul><li>
+Jelaskan maksud kode langkah 2 tersebut!</br>
+Fungsi `getNumber` membuat objek `Completer`, memicu operasi async dengan memanggil fungsi `calculate`, dan mengembalikan `future` yang akan berisi hasil dari operasi tersebut. Fungsi `calculate` menunggu selama 5 detik, kemudian menyelesaikan objek `Completer` dengan nilai 42, sehingga `future` yang dikembalikan oleh `getNumber` akan berisi nilai tersebut setelah operasi async selesai.
+</li>
+<li>
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 5</b>".</br>
+
+![gif](docs/gif/soal5.gif)</ul>
