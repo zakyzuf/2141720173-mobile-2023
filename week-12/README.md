@@ -47,3 +47,9 @@ Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan co
 
 ![gif](docs/gif/soal6.gif)</ul>
 </ul>
+
+# Soal 7
+<ul><li>
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 7</b>".</br>
+
+![gif](docs/gif/soal7.gif)</ul></ul>
