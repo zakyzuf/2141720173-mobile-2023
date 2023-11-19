@@ -90,7 +90,8 @@ Perbedaan antara langkah 1 dan langkah 4 terletak pada cara penanganan exception
 Tambahkan nama panggilan Anda pada tiap properti `title` sebagai identitas pekerjaan Anda. </br>
 
 ![img](docs/images/soal11.png)
-<ul>
+</li>
+</ul>
 
 ## Soal 12
 
@@ -105,4 +106,18 @@ Pada chrome saya bisa mendapat koordinat GPS, karena chrome mendukung berbagai A
 
 ![gif](docs/gif/soal12_2.gif)
 </li>
+</ul>
+
+## Soal 13
+
+<ul>
+<li>Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?</br>
+
+Ada perbedaan UI dengan praktikum sebelumnya, pada praktikum sebelumnya `Latitude - Longitude`, sedangkan pada langkah ini tampilannya `Latitude, Longitude`. Terjadi demikian karena pada langkah ini UInya menggunakan data dari `snapshot`.
+</li>
+<li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 13"</b>.</br>
+
+![gif](docs/gif/soal13.gif)
+</li>
+<li>Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
 </ul>
