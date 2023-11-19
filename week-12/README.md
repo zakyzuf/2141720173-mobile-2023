@@ -138,4 +138,17 @@ Tidak ada perbedaan UI dengan langkah sebelumnya, karena pada langkah ini hanya 
 
 ![gif](docs/gif/soal14.gif)
 </li>
+</ul></br>
+
+# Praktikum 8: Navigation route dengan Future Function
+
+## Soal 15
+<ul><li>Tambahkan nama panggilan Anda pada tiap properti `title` sebagai identitas pekerjaan Anda.</br>
+
+![img](docs/images/soal15.png)
+</li>
+<li>Silakan ganti dengan warna tema favorit Anda.</li></br>
+
+![img](docs/images/soal15_1.png)
 </ul>
+
