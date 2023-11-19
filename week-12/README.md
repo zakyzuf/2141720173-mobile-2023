@@ -92,3 +92,17 @@ Tambahkan nama panggilan Anda pada tiap properti `title` sebagai identitas peker
 ![img](docs/images/soal11.png)
 <ul>
 
+## Soal 12
+
+<ul>
+<li>Jika Anda tidak melihat animasi loading tampil, kemungkinan itu berjalan sangat cepat. Tambahkan delay pada method getPosition() dengan kode await Future.delayed(const Duration(seconds: 3));</li>
+<li>Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?</br>
+
+![gif](docs/gif/soal12_1.gif)</br>
+Pada chrome saya bisa mendapat koordinat GPS, karena chrome mendukung berbagai API web yang memungkinkan akses ke berbagai perangkat keras, termasuk GPS (Geolocation API). Saya juga mengizinkan chrome untuk dapat menggunakan Geolocation API untuk mendapatkan koordinat geografis (latitude dan longitude).
+</li>
+<li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 12</b>".</br>
+
+![gif](docs/gif/soal12_2.gif)
+</li>
+</ul>
