@@ -48,8 +48,20 @@ Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan co
 ![gif](docs/gif/soal6.gif)</ul>
 </ul>
 
-# Soal 7
+## Soal 7
 <ul><li>
 Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 7</b>".</br>
 
-![gif](docs/gif/soal7.gif)</ul></ul>
+![gif](docs/gif/soal7.gif)</ul>
+
+## Soal 8
+<ul><li>
+Jelaskan maksud perbedaan kode langkah 1 dan 4!</br>
+Perbedaan utama antara langkah 1 dan langkah 4 terletak pada cara pengelolaan future. Pada langkah 1, digunakan `FutureGroup` untuk mengelola sejumlah future secara terpisah sebelum menggabungkannya, sedangkan pada langkah 4, pendekatan lebih sederhana dengan menggunakan `Future.wait` untuk menunggu semua future di dalam list dan mengembalikan future tunggal. Langkah 4 lebih mudah dimengerti daripada langkah 1.
+</ul>
+
+## Soal 9
+<ul><li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 9</b>".</br>
+
+![gif](docs/gif/soal7.gif)</ul>
+
