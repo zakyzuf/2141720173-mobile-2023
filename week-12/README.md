@@ -36,3 +36,14 @@ Fungsi `getNumber` membuat objek `Completer`, memicu operasi async dengan memang
 Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 5</b>".</br>
 
 ![gif](docs/gif/soal5.gif)</ul>
+
+## Soal 6
+<ul><li>
+Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!</br>
+Perbedaan utama antara langkah 2 dan langkah 5-6 adalah penanganan kesalahan (error handling) yang ditambahkan pada langkah 5-6. Dengan menggunakan blok try-catch dan .catchError, kode dapat menangani situasi di mana terjadi kesalahan selama eksekusi future, dan memberikan respons yang sesuai seperti mengatur nilai result menjadi 'An error occurred'.
+</li>
+<li>
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 6</b>".</br>
+
+![gif](docs/gif/soal6.gif)</ul>
+</ul>
