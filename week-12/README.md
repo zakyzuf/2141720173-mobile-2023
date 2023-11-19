@@ -152,3 +152,19 @@ Tidak ada perbedaan UI dengan langkah sebelumnya, karena pada langkah ini hanya 
 ![img](docs/images/soal15_1.png)
 </ul>
 
+## Soal 16
+<ul><li>Cobalah klik setiap button, apa yang terjadi? Mengapa demikian?</br>
+
+![gif](docs/gif/soal16_1.gif)</br>
+
+Yang terjadi, warna akan berubah setiap button diklik. Warna yang mengalami perubahan setiap kali tombol ditekan terjadi karena cara implementasi dalam kode Flutter yang telah diprogram sebelumnya. Pada tampilan awal, yaitu `NavigationFirst`, ketika tombol "Change Color" ditekan, fungsi `_navigateAndGetColor` dipanggil. Fungsi ini menggunakan `Navigator.push` untuk membuka tampilan kedua, `NavigationSecond`, di mana pengguna dapat memilih warna dari tiga opsi yang tersedia (Merah, Hijau, atau Biru). Setelah memilih warna, pengguna kembali ke tampilan pertama, dan warna yang telah dipilih dikirimkan kembali melalui `Navigator.pop`.
+</li>
+<li>Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!</br>
+
+![img](docs/images/soal16.png)
+</li>
+<li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "<b>W12: Soal 16</b>".<br>
+
+![gif](docs/gif/soal16_2.gif)
+</li>
+</ul></br>
