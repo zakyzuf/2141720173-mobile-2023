@@ -12,3 +12,16 @@
 </li>
 <li>Lakukan commit hasil jawaban Soal 1 dengan pesan "<b>W13: Jawaban Soal 1</b>"</li>
 </ul>
+
+## Soal 2
+<ul>
+<li>
+
+Tambahkan 5 warna lainnya sesuai keinginan Anda pada variabel `colors` tersebut.
+
+![img](docs/images/soal2.png)
+</li>
+<li>
+Lakukan commit hasil jawaban Soal 2 dengan pesan "<b>W13: Jawaban Soal 2</b>"
+</li>
+</ul>
