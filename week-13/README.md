@@ -57,3 +57,19 @@ Perbedaannya adalah ketika menggunakan await for, fungsi yang mengandungnya akan
 </li>
 <li>Lakukan commit hasil jawaban Soal 5 dengan pesan "<b>W13: Jawaban Soal 5</b>"</li>
 </ul>
+
+# Praktikum 2: Stream controllers dan sinks
+
+## Soal 6
+<ul>
+<li>Jelaskan maksud kode langkah 8 dan 10 tersebut!</br>
+
+Pada langkah 8, membuat dan mengelola objek NumberStream yang berfungsi untuk menangani data numerik melalui aliran (stream). Lalu, menggunakan metode listen pada aliran tersebut untuk secara otomatis memperbarui nilai lastNumber setiap kali ada perubahan dalam aliran data numerik. Pada langkah 10, fungsi `addRandomNumber` menghasilkan angka acak (0-9) dan menyuntikkannya ke dalam sink objek `NumberStream`. Ini memicu pengiriman angka kepada semua pendengar yang telah didaftarkan pada stream, termasuk fungsi pada langkah 8 yang memperbarui nilai `lastNumber` saat ada perubahan pada stream.
+</li>
+<li>
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README.</br>
+
+![gif](docs/gif/soal6.gif)
+</li>
+<li>Lalu lakukan commit dengan pesan "<b>W13: Jawaban Soal 6</b>".
+</ul>
