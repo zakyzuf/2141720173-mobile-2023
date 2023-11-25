@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-
 import 'random_bloc.dart';
 
-class StreamHomeaPage extends StatefulWidget {
-  const StreamHomeaPage({super.key});
+class StreamHomePage extends StatefulWidget {
+  const StreamHomePage({super.key});
 
   @override
-  State<StreamHomeaPage> createState() => _StreamHomeaPageState();
+  State<StreamHomePage> createState() => _StreamHomePageState();
 }
 
-class _StreamHomeaPageState extends State<StreamHomeaPage> {
+class _StreamHomePageState extends State<StreamHomePage> {
   final RandomNumberBloc _bloc = RandomNumberBloc();
   @override
   Widget build(BuildContext context) {
