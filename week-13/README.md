@@ -40,3 +40,12 @@ Membuat Stream yang mengeluarkan nilai pada interval waktu 1 detik. Menggunakan 
 <li>Lakukan commit hasil jawaban Soal 3 dengan pesan "<b>W13: Jawaban Soal 3</b>"</li>
 
 </ul>
+
+## Soal 4
+<ul>
+<li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README.</br>
+
+![gif](docs/gif/soal4.gif)
+</li>
+<li>Lakukan commit hasil jawaban Soal 4 dengan pesan "W13: Jawaban Soal 4"</li>
+</ul>
