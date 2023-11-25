@@ -82,3 +82,18 @@ Langkah 13 bertujuan untuk menambahkan error ke dalam sink dari suatu controller
 <li>Kembalikan kode seperti semula pada Langkah 15, comment addError() agar Anda dapat melanjutkan ke praktikum 3 berikutnya.</li>
 <li>Lalu lakukan commit dengan pesan "<b>W13: Jawaban Soal 7</b>".</li>
 </ul>
+
+# Praktikum 3: Injeksi data ke streams
+## Soal 8
+<ul>
+<li>Jelaskan maksud kode langkah 1-3 tersebut!
+</br>
+
+Langkah 1 mendeklarasikan variabel transformer yang akan digunakan sebagai objek StreamTransformer. Langkah 2, Anda membuat dan mengonfigurasi objek transformer menggunakan `StreamTransformer<int, int>.fromHandlers.`. Langkah 3 menggunakan objek transformer untuk mengubah Stream. 
+</li>
+<li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README.</br>
+
+![gif](docs/gif/soal8.gif)
+</li>
+<li>Lalu lakukan commit dengan pesan "<b>W13: Jawaban Soal 8</b>".</li>
+</ul>
