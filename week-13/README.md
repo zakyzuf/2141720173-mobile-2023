@@ -146,3 +146,17 @@ Kode pada langkah 3 (number_stream.dart) mendefinisikan kelas NumberStream yang 
 </li>
 <li>Lalu lakukan commit dengan pesan "<b>W13: Jawaban Soal 12</b>".</li>
 </ul>
+
+# Praktikum 7: BLoC Pattern
+## Soal 13
+<ul>
+<li>Jelaskan maksud praktikum ini ! Dimanakah letak konsep pola BLoC-nya ?</br>
+
+Praktikum ini membahas cara menggunakan pola BLoC (Business Logic Component) dalam mengembangkan aplikasi Flutter. Konsep BLoC diaplikasikan melalui pembuatan `RandomNumberBloc` pada langkah-langkah 2 hingga 6, di mana dua `StreamController` digunakan untuk mengatur sinyal pembuatan angka acak dan mengirimkan angka tersebut. Selanjutnya, BLoC tersebut diimplementasikan dalam aplikasi Flutter pada langkah-langkah 7 hingga 13. Widget `StreamHomeaPage` menggunakan stream dari BLoC untuk menampilkan angka acak dalam antarmuka pengguna. Floating action button digunakan untuk memicu pembangkitan angka acak, dan metode `dispose()` dipanggil untuk membersihkan sumber daya ketika widget tersebut tidak lagi diperlukan. Dengan demikian, penerapan pola BLoC membantu memisahkan logika bisnis dan antarmuka pengguna, meningkatkan kejelasan dan pemeliharaan dalam pengembangan aplikasi Flutter.
+</li>
+<li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README.</br>
+
+![gif](docs/gif/soal13.gif)
+</li>
+<li>Lalu lakukan commit dengan pesan "<b>W13: Jawaban Soal 13</b>".</li>
+</ul>
