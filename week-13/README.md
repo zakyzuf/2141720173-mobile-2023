@@ -133,3 +133,16 @@ Karena telah ditambahkan `.asBroadcastStream()`, `.asBroadcastStream()` sendiri 
 </li>
 <li>Lalu lakukan commit dengan pesan "<b>W13: Jawaban Soal 10,11</b>".</li>
 </ul>
+
+# Praktikum 6: StreamBuilder
+## Soal 12
+<ul>
+<li>Jelaskan maksud kode pada langkah 3 dan 7 !</br>
+Kode pada langkah 3 (number_stream.dart) mendefinisikan kelas NumberStream yang memiliki metode getNumbers(), menghasilkan stream bilangan bulat acak setiap detik menggunakan Stream.periodic. Pada langkah 7 (main.dart), aplikasi Flutter menggunakan StreamBuilder untuk membangun interface pengguna yang selalu diperbarui berdasarkan data dari stream bilangan bulat acak tersebut. Saat aplikasi dimulai, stream diinisialisasi, dan setiap perubahan pada stream akan mengakibatkan pembaruan tampilan, menampilkan nilai terbaru dari stream dalam bentuk besar pada layar aplikasi.
+</li>
+<li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README.</br>
+
+![gif](docs/gif/soal12.gif)
+</li>
+<li>Lalu lakukan commit dengan pesan "<b>W13: Jawaban Soal 12</b>".</li>
+</ul>
