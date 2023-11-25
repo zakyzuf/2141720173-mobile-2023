@@ -111,3 +111,25 @@ Langkah 2 menginisialisasi widget dengan membuat langganan (subscription) terhad
 </li>
 <li>Lalu lakukan commit dengan pesan "<b>W13: Jawaban Soal 9</b>".</li>
 </ul>
+
+# Praktikum 5: Multiple stream subscriptions
+## Soal 10
+<ul><li>
+
+![img](docs/images/soal10.jpg)</br>
+Jelaskan mengapa error itu bisa terjadi?</br>
+Error tersebut bisa terjadi karena pada langkah sebelumnya dilakukan stream.listen 2 kali.
+</li></ul>
+
+## Soal 11
+<ul>
+<li>Jelaskan mengapa hal itu bisa terjadi ?</br>
+
+Karena telah ditambahkan `.asBroadcastStream()`, `.asBroadcastStream()` sendiri adalah metode digunakan pada objek `Stream` untuk mengubahnya menjadi stream yang dapat ditangani oleh multiple listeners (pendengar) atau subscriber.  
+</li>
+<li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README.</br>
+
+![gif](docs/gif/soal11.gif)
+</li>
+<li>Lalu lakukan commit dengan pesan "<b>W13: Jawaban Soal 10,11</b>".</li>
+</ul>
