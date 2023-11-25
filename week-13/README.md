@@ -97,3 +97,17 @@ Langkah 1 mendeklarasikan variabel transformer yang akan digunakan sebagai objek
 </li>
 <li>Lalu lakukan commit dengan pesan "<b>W13: Jawaban Soal 8</b>".</li>
 </ul>
+
+# Praktikum 4: Subscribe ke stream events
+## Soal 9
+<ul>
+<li>Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!</br>
+
+Langkah 2 menginisialisasi widget dengan membuat langganan (subscription) terhadap suatu stream. Langkah 6 membatalkan langganan terhadap stream, menghentikan pemantauan perubahan. Pada langkah 8, metode `addRandomNumber` menambahkan angka acak ke dalam stream jika controller stream belum ditutup; jika sudah ditutup, `lastNumber` diatur menjadi -1, mencegah penambahan data ke dalam stream yang sudah tidak aktif.
+</li>
+<li>Capture hasil praktikum Anda berupa GIF dan lampirkan di README.</br>
+
+![gif](docs/gif/soal9.gif)
+</li>
+<li>Lalu lakukan commit dengan pesan "<b>W13: Jawaban Soal 9</b>".</li>
+</ul>
