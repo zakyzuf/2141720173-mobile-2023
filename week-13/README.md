@@ -49,3 +49,11 @@ Membuat Stream yang mengeluarkan nilai pada interval waktu 1 detik. Menggunakan 
 </li>
 <li>Lakukan commit hasil jawaban Soal 4 dengan pesan "W13: Jawaban Soal 4"</li>
 </ul>
+
+## Soal 5
+<ul>
+<li>Jelaskan perbedaan menggunakan listen dan await for (langkah 9)!</br>
+Perbedaannya adalah ketika menggunakan await for, fungsi yang mengandungnya akan menunggu setiap nilai dari stream sebelum melanjutkan eksekusi ke nilai berikutnya. Sedangkan ketike menggunakan listen eksekusi fungsi yang diberikan tidak menunggu setiap nilai di stream, sehingga tidak menghentikan eksekusi program.
+</li>
+<li>Lakukan commit hasil jawaban Soal 5 dengan pesan "<b>W13: Jawaban Soal 5</b>"</li>
+</ul>
