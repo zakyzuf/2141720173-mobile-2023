@@ -73,3 +73,12 @@ Capture hasil praktikum Anda berupa GIF dan lampirkan di README.</br>
 </li>
 <li>Lalu lakukan commit dengan pesan "<b>W13: Jawaban Soal 6</b>".
 </ul>
+
+## Soal 7
+<ul><li>
+Jelaskan maksud kode langkah 13 sampai 15 tersebut!</br>
+Langkah 13 bertujuan untuk menambahkan error ke dalam sink dari suatu controller. Sink digunakan untuk mengirim data ke dalam stream. Langkah 14 membuat jika terjadi kesalahan dalam stream, maka metode onError akan dijalankan (nilai lastNumber diatur menjadi -1). Pada langkah 15 dimaksudkan untuk menambahkan error ke dalam suatu stream yang disebut numberStream. Dengan memanggil addError() pada stream tersebut, seakan-akan terjadi kesalahan dalam stream, yang akan memicu pemanggilan metode onError yang telah ditentukan pada langkah 14.
+</li>
+<li>Kembalikan kode seperti semula pada Langkah 15, comment addError() agar Anda dapat melanjutkan ke praktikum 3 berikutnya.</li>
+<li>Lalu lakukan commit dengan pesan "<b>W13: Jawaban Soal 7</b>".</li>
+</ul>
